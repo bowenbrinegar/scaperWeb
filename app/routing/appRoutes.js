@@ -1,5 +1,5 @@
 
 
-module.exports = (app, cherrio, request, exhdb, mongoose, db) => {
+module.exports = (app, cherrio, request, exphbs, db) => {
 
 }
