@@ -3,19 +3,19 @@
     val === '100' ? (animate(), scrape()) : null
   });
 
-const animate = () => {
-  $('#homeContainer').hide('slide', {direction: "left"}, 1000, null)
-}
+  const animate = () => {
+    $('#homeContainer').hide('slide', {direction: "left"}, 1000, null)
+  };
 
-const scrape = () => {
-  $.ajax({
-    type: 'GET',
-    url: '/scrape',
-    success: render
-  })
-}
+  const scrape = () => {
+    $.ajax({
+      type: 'GET',
+      url: '/scrape',
+      success: render
+    })
+  };
 
-const render = res => {
-  $('#articleContainer').load('/partial', res)
-}
+  const render = res => {
+    $('#articleContainer').html(res)
+  };
 
