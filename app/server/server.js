@@ -1,6 +1,6 @@
 const express = require('express');
 const bodyParser = require('body-parser');
-const path = require('path')
+const path = require('path');
 
 const mongoose = require('mongoose');
 const db = require('./models/index');
@@ -30,13 +30,14 @@ const hbs = exphbs.create({
   partialsDir: 'app/server/views/partials'
 })
 
+
 app.engine("handlebars", hbs.engine);
 
 app.set("view engine", "handlebars");
-app.set('views', __dirname + '/views')
-app.use('/', express.static(publicPath))
+app.set('views', __dirname + '/views');
+app.use('/', express.static(publicPath));
 
-require('./routing/appRoutes')(app, hbs, cherrio, request, db);
+require('./routing/appRoutes')(app, cherrio, request, db);
 
 app.listen(PORT, () => {
   console.log(`App listening on PORT ${PORT}`);
