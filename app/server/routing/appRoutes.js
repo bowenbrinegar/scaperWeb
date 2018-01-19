@@ -1,5 +1,5 @@
 
-module.exports = (app, hbs, cheerio, request, db) => {
+module.exports = (app, cheerio, request, db) => {
   app.get('/', (req, res) => {
     res.render('index')
   });
@@ -15,8 +15,8 @@ module.exports = (app, hbs, cheerio, request, db) => {
           title: title
         });
       });
-
-      res.render('partials/articles/index', {layout: false, data: {obj: results}})
+      // handlebars.registerPartial('articles/index', {obj: results} )
+      res.render('partials/articles/index', {layout: false, articles: results})
     });
   });
 };
