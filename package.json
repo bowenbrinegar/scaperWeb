@@ -2,7 +2,7 @@
   "name": "scraperweb",
   "version": "1.0.0",
   "description": "Scraper for the News",
-  "main": "server.js",
+  "main": "./app/server/server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -23,7 +23,8 @@
     "mongoose": "^5.0.0",
     "body-parser": "^1.18.2",
     "cheerio": "^1.0.0-rc.2",
-    "request": "^2.83.0"
+    "request": "^2.83.0",
+    "path": "^0.12.7"
   },
   "devDependencies": {
     "eslint": "^4.15.0"
