@@ -23,18 +23,20 @@ app.use(bodyParser.json({ type: 'application/vnd.api+json' }));
 
 const publicPath = path.join(__dirname +'/public')
 
-app.engine("handlebars", exphbs({
+const hbs = exphbs.create({
   defaultLayout: "main",
   extname: '.handlebars',
   layoutsDir: 'app/server/views/layouts',
   partialsDir: 'app/server/views/partials'
-}));
+})
+
+app.engine("handlebars", hbs.engine);
 
 app.set("view engine", "handlebars");
 app.set('views', __dirname + '/views')
 app.use('/', express.static(publicPath))
 
-require('./routing/appRoutes')(app, cherrio, request, db);
+require('./routing/appRoutes')(app, hbs, cherrio, request, db);
 
 app.listen(PORT, () => {
   console.log(`App listening on PORT ${PORT}`);
