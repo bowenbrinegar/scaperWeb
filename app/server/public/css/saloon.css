@@ -1,0 +1,12 @@
+.saloonButton {
+    border: none;
+    float: left;
+    height: 100%;
+    width: 50%;
+    background: rgba(0,0,0,.2);
+    font-size: 50px;
+}
+
+.saloonButton:hover {
+    background: green;
+}
