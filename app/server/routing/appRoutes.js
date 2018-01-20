@@ -15,7 +15,7 @@ module.exports = (app, cheerio, request, db) => {
           title: title
         });
       });
-      // handlebars.registerPartial('articles/index', {obj: results} )
+
       res.render('partials/articles/index', {layout: false, articles: results})
     });
   });

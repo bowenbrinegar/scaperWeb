@@ -1,3 +1,4 @@
+
   $('.slider').on('change', () => {
     let val = $('#scrapeButton input').val();
     val === '100' ? (animate(), scrape()) : null
