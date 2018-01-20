@@ -27,7 +27,9 @@
     top: 8%;
     height: 120px;
     width: 80%;
-    background: rgba(0,0,0,.2)
+    background: rgba(0,0,0,.2);
+    border-radius: 25px;
+    overflow: hidden;
 }
 
 #articleContainer {
