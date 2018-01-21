@@ -37,3 +37,4 @@ const fetchBookmarked = () => {
 const renderBookmarked = res => {
   $('#bookmarked').html(res)
 }
+

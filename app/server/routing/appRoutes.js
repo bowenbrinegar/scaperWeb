@@ -21,11 +21,13 @@ module.exports = (app, cheerio, request, db) => {
   });
 
   app.get('/bookmarked', (req, res) => {
+
     // db.Article.remove({title: ''}, {multi: true}).then(() => {
     //   console.log('success')
     // }).catch(err => {
     //   console.log(err)
     // })
+
     db.Article.find({})
       .then( (result) => {
         console.log('bookmarked res', result)
