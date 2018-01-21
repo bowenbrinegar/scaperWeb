@@ -1,5 +1,56 @@
-#notes {
-    display: none;
-    height: 400px;
-    width: 600px;
+#addNoteCont {
+    position: absolute;
+    -webkit-transform: translate(-50%,0);
+    -moz-transform: translate(-50%,0);
+    -ms-transform: translate(-50%,0);
+    -o-transform: translate(-50%,0);
+    transform: translate(-50%,0);
+    left: 50%;
+    top: 5%;
+    width: 90%;
+}
+#noteInput {
+    float: left;
+    border: none;
+    width: 70%;
+    height: 20px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+    padding: 5px;
+}
+
+#submitNote {
+    float: right;
+    width: 25%;
+    height: 30px;
+    padding: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+    border: none;
+}
+
+#submitNote:hover {
+    background: tomato;
+    color: white;
+}
+
+#notesCont {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 85%;
+    overflow: scroll;
+    padding-bottom: 10px;
+}
+
+#noteListItem {
+    background: floralwhite;
+    height: 50px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+    width: 90%;
+    margin: 5px auto;
 }
