@@ -32,7 +32,7 @@
     overflow: hidden;
 }
 
-#articleContainer {
+#articleContainer, #bookmarked {
     position: absolute;
     -webkit-transform: translate(-50%, 0);
     -moz-transform: translate(-50%, 0);
