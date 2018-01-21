@@ -4,6 +4,7 @@ module.exports = (app, cheerio, request, db) => {
     // db.Article.remove({}, {multi: true})
     //   .then( result => console.log('success'))
     //   .catch( err => console.log(err));
+    // db.Note.remove({}, {multi: true}).then().catch()
     res.render('index')
   });
 
@@ -41,21 +42,20 @@ module.exports = (app, cheerio, request, db) => {
   });
 
   app.get('/article-notes/:id', (req, res) => {
-    db.Article.findOne({_id: req.params.id})
-      .populate('note')
-      .then( result => res.send(result))
+    console.log("still there?", req.params.id)
+    db.Note.find({article: req.params.id})
+      .then( result => {
+        res.render('partials/notes/index',
+          {layout: false, notes: result})
+      })
       .catch( err => res.send(err))
   });
 
   app.post('/note', (req, res) => {
-    const note = req.body
-    console.log('note', note)
+    const note = req.body;
+    console.log('note', note);
     db.Note.create(note)
-      .then( note => {
-        db.Article.findByIdAndUpdate(note.id, {note: note._id})
-          .then( note => res.json(note))
-          .catch( err => res.send(err))
-      })
+      .then( note => res.send('success'))
       .catch( err => console.log(err))
   })
 };
