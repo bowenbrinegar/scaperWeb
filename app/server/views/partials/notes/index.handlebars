@@ -1,0 +1,12 @@
+<div id='addNoteCont'>
+    {{> notes/note-components/search}}
+</div>
+
+<div id='notesCont'>
+    {{#each notes}}
+        <div id='noteListItem'>
+            <h1>{{body}}</h1>
+        </div>
+    {{/each}}
+</div>
+

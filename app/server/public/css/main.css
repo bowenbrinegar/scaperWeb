@@ -43,3 +43,25 @@
     top: 25%;
     width: 80%;
 }
+
+#bookmarked {
+    display: none;
+}
+
+#notes {
+    display: none;
+    position: absolute;
+    -webkit-transform: translate(-50%,-50%);
+    -moz-transform: translate(-50%,-50%);
+    -ms-transform: translate(-50%,-50%);
+    -o-transform: translate(-50%,-50%);
+    transform: translate(-50%,-50%);
+    left: 50%;
+    top: 50%;
+    height: 400px;
+    width: 600px;
+    background: rgba(0,0,0,.8);
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    border-radius: 10px;
+}
