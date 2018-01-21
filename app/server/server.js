@@ -6,7 +6,7 @@ const mongoose = require('mongoose');
 const db = require('./models/index');
 
 mongoose.Promise = Promise;
-mongoose.connect("mongodb://localhost/scrape");
+mongoose.connect("mongodb://heroku_4rb64jv5:615455hjerpla2te26eaahcj6q@ds111478.mlab.com:11478/heroku_4rb64jv5");
 
 const cherrio = require('cheerio');
 const request = require('request');
