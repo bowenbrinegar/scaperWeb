@@ -40,7 +40,7 @@
     -o-transform: translate(-50%, 0);
     transform: translate(-50%, 0);
     left: 50%;
-    top: 25%;
+    top: 28%;
     width: 80%;
 }
 
@@ -64,4 +64,8 @@
     -webkit-border-radius: 10px;
     -moz-border-radius: 10px;
     border-radius: 10px;
+}
+
+#Close {
+    color: white;
 }

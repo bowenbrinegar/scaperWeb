@@ -33,3 +33,10 @@ $('#notes').on('click', '#submitNote', function() {
     success: fetchNotes
   })
 });
+
+
+$('#notes').on('click', 'a', function() {
+  console.log('working');
+  $('#notes').toggle('display');
+  $('#mainContainer').css('filter', 'none');
+})
